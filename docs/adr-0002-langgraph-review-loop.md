@@ -43,7 +43,8 @@ Three things follow:
 
 - The language model is replaceable without touching the decision: template, a local Qwen
   model on CPU, or any OpenAI compatible endpoint, selected by configuration.
-- Small local models fail the checks often. That is measured per check, and the fallback
-  means a failure costs review time, never a wrong record.
+- Small local models fail the checks often. With Qwen2.5-0.5B on 44 photos, 2 notes pass on
+  the first try and 35 within three tries when the problems are fed back. The fallback means
+  a failure costs review time, never a wrong record.
 - SQLite is fine for one inspector or a small team. A shared deployment would use the
   Postgres checkpointer with the same graph.
