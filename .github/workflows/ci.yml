@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Tests
+        run: pytest -q
+      - name: Smoke run on the bundled sample
+        run: bridge-triage demo
+
+  model-smoke:
+    # Trains a throwaway model on the 8 bundled photos for one epoch, exports it to ONNX and
+    # runs one photo through the full workflow with it. Checks the plumbing, not the accuracy.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install with the train extra (CPU wheels)
+        run: |
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[train]"
+      - name: Arrange the sample as a training split
+        run: |
+          mkdir -p /tmp/split/Train/images_512 /tmp/split/Train/mask_512
+          cp sample_data/images/*.jpeg /tmp/split/Train/images_512/
+          cp sample_data/masks/*.png /tmp/split/Train/mask_512/
+      - name: Train one epoch and export
+        run: bridge-triage train --data-dir /tmp/split --out-dir /tmp/model --size 128 --epochs 1 --no-pretrained
+      - name: Inspect a photo with the exported model
+        run: |
+          sed -e 's#^model_path:.*#model_path: /tmp/model/corrosion_seg.onnx#' \
+              -e 's#^input_size:.*#input_size: 128#' \
+              -e 's#^retrieval_mode:.*#retrieval_mode: bm25#' \
+              -e 's#^checkpoint_db:.*#checkpoint_db: /tmp/ckpt.sqlite#' \
+              -e 's#^findings_db:.*#findings_db: /tmp/findings.duckdb#' config.yaml > /tmp/ci.yaml
+          bridge-triage inspect sample_data/images/24.jpeg --site richmond-inland --config /tmp/ci.yaml
