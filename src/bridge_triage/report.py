@@ -124,7 +124,7 @@ def architecture(path: Path) -> Path:
 
 def results_figure(results: Path, path: Path, split_root: Path | None = None) -> Path | None:
     vision_p, retr_p = results / "vision.json", results / "retrieval.json"
-    agents = sorted(results.glob("agent_*.json"))
+    agents = sorted(p for p in results.glob("agent_*.json") if "prompt-v" not in p.name)
     if not (vision_p.exists() and retr_p.exists() and agents):
         return None
     vision = json.loads(vision_p.read_text())
@@ -162,13 +162,14 @@ def results_figure(results: Path, path: Path, split_root: Path | None = None) ->
     for x, v in zip(xs, r1):
         ax.text(x - 0.2, v + 0.02, f"{v:.2f}", ha="center", fontsize=8)
     ax.set_xticks(list(xs), [m.replace("+", "+\n").replace("-", "-\n") for m in modes], fontsize=8)
-    ax.set_ylim(0, 1.1)
+    ax.set_ylim(0, 1.25)
     ax.set_title(f"Retrieval, {retr['questions']} questions over {retr['chunks']} FHWA chunks", fontsize=10)
-    ax.legend(frameon=False, fontsize=8, loc="lower right")
+    ax.legend(frameon=False, fontsize=8, loc="upper left", ncol=2)
 
     ax = axes[2]
-    rows = [json.loads(p.read_text()) for p in agents]
-    labels = [r["provider"].replace("hf:Qwen/", "").replace("-Instruct", "") for r in rows]
+    rows = sorted((json.loads(p.read_text()) for p in agents), key=lambda r: -r["photos"])
+    names = [r["provider"].replace("hf:Qwen/", "").replace("-Instruct", "") for r in rows]
+    labels = [f"{n}\n{r['photos']} photos" for n, r in zip(names, rows)]
     first = [r["first_try_pass_rate"] for r in rows]
     final = [r["pass_rate_after_retries"] for r in rows]
     xs = range(len(rows))
@@ -179,9 +180,9 @@ def results_figure(results: Path, path: Path, split_root: Path | None = None) ->
     for x, v in zip(xs, final):
         ax.text(x + 0.2, v + 0.02, f"{v:.2f}", ha="center", fontsize=8)
     ax.set_xticks(list(xs), labels, fontsize=8)
-    ax.set_ylim(0, 1.1)
-    ax.set_title(f"Inspection notes on {rows[0]['photos']} photos, checked by code", fontsize=10)
-    ax.legend(frameon=False, fontsize=8, loc="lower right")
+    ax.set_ylim(0, 1.25)
+    ax.set_title("Notes that pass the code checks", fontsize=10)
+    ax.legend(frameon=False, fontsize=8, loc="upper left", ncol=2)
 
     for a in axes:
         a.spines[["top", "right"]].set_visible(False)
@@ -224,13 +225,27 @@ def examples_figure(
     fig.tight_layout()
     fig.savefig(path, bbox_inches="tight", facecolor="white")
     plt.close(fig)
+    # 256 colour palette keeps the file under 1 MB in the repo
+    rgb = Image.open(path).convert("RGB")
+    small = rgb.quantize(colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+    small.save(path, optimize=True)
     return path
 
 
-def build(results: Path, docs: Path) -> list[Path]:
+def build(
+    results: Path,
+    docs: Path,
+    split_root: Path = Path("data/raw/vt_corrosion/512x512"),
+    model_path: Path = Path("data/model/corrosion_seg.onnx"),
+    size: int = 320,
+) -> list[Path]:
     docs.mkdir(exist_ok=True)
     out = [architecture(docs / "architecture.png")]
     r = results_figure(results, docs / "results.png")
     if r:
         out.append(r)
+    if model_path.exists() and (split_root / "Test").exists():
+        # one photo per worst state, including the CS4 photo the model calls CS3
+        names = ["21", "18", "24", "28", "17"]
+        out.append(examples_figure(results, split_root, model_path, size, docs / "examples.png", names))
     return out

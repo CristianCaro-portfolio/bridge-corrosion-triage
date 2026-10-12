@@ -203,6 +203,7 @@ def evaluate(
     oracle: bool = typer.Option(True, help="agent eval on annotated masks to isolate the language model"),
     provider: str = typer.Option(None, help="template, hf or openai"),
     model: str = typer.Option(None, help="model id for the hf provider"),
+    limit: int = typer.Option(0, help="agent eval on the first N test photos only"),
     out: Path = typer.Option(None),
 ):
     """Measured runs. Results go to results/*.json."""
@@ -225,9 +226,8 @@ def evaluate(
 
         p = get_provider(provider or s.provider, model or s.provider_model)
         tag = p.name.split("/")[-1].replace(":", "-")
-        r = experiments.agent(
-            s, split_root, out or Path(f"results/agent_{tag}.json"), site, oracle, provider=p
-        )
+        out = out or Path(f"results/agent_{tag}{f'_first{limit}' if limit else ''}.json")
+        r = experiments.agent(s, split_root, out, site, oracle, provider=p, limit=limit or None)
         _print({k: v for k, v in r.items() if k != "runs"})
     else:
         raise typer.BadParameter("choose vision, retrieval or agent")

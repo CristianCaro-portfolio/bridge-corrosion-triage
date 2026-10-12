@@ -14,10 +14,15 @@ import urllib.request
 from dataclasses import dataclass
 from typing import Protocol
 
+# Prompt history, measured with Qwen2.5-0.5B on 44 photos (results/agent_*_prompt-v*.json):
+# v1 put a fixed example tag here and the model copied it instead of citing what was retrieved,
+# v2 removed the example and the model stopped citing at all. v3 (below and in build_prompt)
+# gives as example the tag of the first retrieved excerpt, which is always a valid citation.
 SYSTEM = (
     "You write short bridge inspection notes for steel members. Use only the facts given. "
-    "Do not invent measurements. Cite guidance with the exact tag shown, for example "
-    "[FHWA-HIF-16-002:45]. Plain text, no lists, no markdown."
+    "Do not invent measurements. Cite guidance by copying the tag in square brackets that "
+    "appears in front of the excerpt you rely on. Plain text in one paragraph, no headings, "
+    "no lists, no markdown."
 )
 
 
@@ -36,7 +41,9 @@ def build_prompt(facts: dict, excerpts: list[dict], feedback: list[str] | None =
         f"- state the worst condition state as {facts['worst_state_label']}",
         "- give the corroded share of the photo using the percentages in the facts",
         f"- state the action with its priority code {facts['priority']} and the due time in days",
-        "- cite at least one excerpt using its tag in square brackets",
+        "- cite at least one excerpt by copying its tag exactly"
+        + (f", for example [{excerpts[0]['cite']}]" if excerpts else ""),
+        "- use no numbers other than the ones in the facts",
     ]
     if feedback:
         lines += ["", "Your previous note was rejected because:"] + [f"- {f}" for f in feedback]
