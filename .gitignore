@@ -1,0 +1,28 @@
+# data and models are downloaded or trained, never committed
+data/
+*.onnx
+*.pt
+*.pth
+*.safetensors
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# local settings and secrets
+.env
+*.sqlite
+*.duckdb
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store

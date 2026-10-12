@@ -1,0 +1,36 @@
+# Segmentation model exported by `bridge-triage train`
+model_path: data/model/corrosion_seg.onnx
+input_size: 320
+# a condition state counts for the worst state only above this share of the photo
+min_area_pct: 0.5
+
+corpus_path: sample_data/fhwa_chunks.jsonl
+vector_cache: data/cache/vectors.npz
+retrieval_mode: hybrid+rerank  # bm25, dense, hybrid, hybrid+rerank
+embedder: fastembed           # fastembed (BAAI/bge-small-en-v1.5) or hashing (offline)
+top_k: 4
+
+provider: template            # template, hf, openai (override with TRIAGE_PROVIDER)
+provider_model: null          # e.g. Qwen/Qwen2.5-0.5B-Instruct for hf
+max_attempts: 3
+
+checkpoint_db: data/checkpoints.sqlite
+findings_db: data/findings.duckdb
+
+# Example sites. The photos in the dataset come from Virginia DOT inspection reports, so the
+# weather comes from three Virginia airports (NOAA LCD, 2024). The marine flag is a property
+# of the bridge site that an owner sets; norfolk-harbor is an example of a crossing over tidal
+# water, not a specific bridge.
+sites:
+  richmond-inland:
+    station: "72401013740"
+    weather_file: sample_data/weather/lcd_72401013740_2024.csv.gz
+    marine: false
+  roanoke-valley:
+    station: "72411013741"
+    weather_file: sample_data/weather/lcd_72411013741_2024.csv.gz
+    marine: false
+  norfolk-harbor:
+    station: "72308013737"
+    weather_file: sample_data/weather/lcd_72308013737_2024.csv.gz
+    marine: true

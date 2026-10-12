@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bridge-corrosion-triage"
+version = "0.1.0"
+description = "Steel bridge corrosion triage: condition states from photos, site climate from NOAA, guidance from FHWA, an engineer in the loop"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "Cristian Caro" }]
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10.0",
+    "onnxruntime>=1.18",
+    "langgraph>=1.2.12",
+    "langgraph-checkpoint-sqlite>=3.0",
+    "rank-bm25>=0.2.2",
+    "fastembed>=0.5",
+    "duckdb>=1.1",
+    "pypdf>=5.0",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+train = ["torch>=2.4", "torchvision>=0.19", "onnx>=1.16"]
+llm = ["torch>=2.4", "transformers>=4.45", "accelerate>=0.34"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+bridge-triage = "bridge_triage.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# B008: typer defaults in signatures. B905: every zip here pairs lists built with the same length
+ignore = ["B008", "B905"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
