@@ -1,0 +1,43 @@
+{
+  "questions": 22,
+  "chunks": 328,
+  "modes": {
+    "bm25": {
+      "recall@1": 0.8636,
+      "recall@3": 0.9545,
+      "recall@5": 0.9545,
+      "mrr@10": 0.9167,
+      "ms_per_query": 0.5
+    },
+    "dense": {
+      "recall@1": 0.7273,
+      "recall@3": 0.9091,
+      "recall@5": 0.9545,
+      "mrr@10": 0.822,
+      "ms_per_query": 47.2
+    },
+    "hybrid": {
+      "recall@1": 0.7727,
+      "recall@3": 0.9091,
+      "recall@5": 0.9545,
+      "mrr@10": 0.8588,
+      "ms_per_query": 50.5
+    },
+    "hybrid+rerank": {
+      "recall@1": 0.9545,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr@10": 0.9773,
+      "ms_per_query": 1204.5
+    },
+    "hybrid-hashing": {
+      "recall@1": 0.7727,
+      "recall@3": 0.9091,
+      "recall@5": 0.9545,
+      "mrr@10": 0.8413,
+      "ms_per_query": 0.5
+    }
+  },
+  "embedder": "BAAI/bge-small-en-v1.5",
+  "reranker": "Xenova/ms-marco-MiniLM-L-6-v2"
+}

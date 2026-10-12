@@ -1,0 +1,706 @@
+{
+  "provider": "hf:Qwen/Qwen2.5-0.5B-Instruct",
+  "segmenter": "annotated masks",
+  "site": "richmond-inland",
+  "photos": 44,
+  "first_try_pass_rate": 0.0455,
+  "pass_rate_after_retries": 0.7955,
+  "fallback_rate": 0.2045,
+  "review_rate": 0.8636,
+  "mean_attempts": 2.36,
+  "median_seconds_per_photo": 52.819,
+  "problem_counts": {
+    "does not give the priority code P1": 27,
+    "does not give the priority code P2": 24,
+    "numbers not in the facts": 12,
+    "no citation in [DOC": 7,
+    "does not give the priority code P4": 1
+  },
+  "runs": [
+    {
+      "image": "0",
+      "seconds": 79.477,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 33.41%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "1",
+      "seconds": 28.944,
+      "attempts": 1,
+      "first_try_ok": true,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 6.0%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Due Days:** 120\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains adequate. The recommended action includes measuring the remaining thickness, cleaning the steel to bare steel, and applying zone paint to the affected area. The priority code for this task is P2, and the due time is 120 days."
+    },
+    {
+      "image": "2",
+      "seconds": 53.71,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1"
+      ],
+      "note": "**Bridge Inspection Record**\n\n**Worst Condition State:** CS4 (Severe)\n\n**Corroded Share:** 30.89%\n\n**Action:** Structural evaluation of section loss by a qualified engineer before any coating work.\n\n**Priority Code P1:** 1\n\n**Due Days:** 30\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:15]\n\n**Note:**\n\nThe structural evaluation process has been initiated to assess the corrosion status of the steel sections of the bridge. Given the presence of severe environmental conditions, such as frequent deicing salt applications and potential corrosion due to section loss, it is imperative to take immediate action to protect the steel components. This includes conducting a thorough structural evaluation to identify any damage or corrosion that may affect the overall integrity of the bridge. The recommended course of action involves structurally evaluating the section"
+    },
+    {
+      "image": "3",
+      "seconds": 51.836,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 22.71%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "4",
+      "seconds": 48.133,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 4.44%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3. **"
+    },
+    {
+      "image": "5",
+      "seconds": 43.256,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 14.04%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "6",
+      "seconds": 45.411,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 30.29%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "7",
+      "seconds": 70.06,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 36.35% of the photo shows corrosion (15.64% fair, 16.54% poor, 4.17% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "8",
+      "seconds": 49.125,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 20.92%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "9",
+      "seconds": 51.889,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 37.76%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3."
+    },
+    {
+      "image": "10",
+      "seconds": 32.319,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 2.41%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The area receives a higher level of time of wetness compared to the rest of the steel structure. Additionally, it receives an increased level of dirt and debris from the roadway. This makes it a critical area for corrosion protection."
+    },
+    {
+      "image": "11",
+      "seconds": 42.76,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 1.36%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3. **"
+    },
+    {
+      "image": "12",
+      "seconds": 52.84,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 29.66%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "13",
+      "seconds": 48.015,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 23.85%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "14",
+      "seconds": 73.241,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 16.28% of the photo shows corrosion (4.17% fair, 10.19% poor, 1.92% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "15",
+      "seconds": 68.078,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 5.04% of the photo shows corrosion (2.77% fair, 1.72% poor, 0.55% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "16",
+      "seconds": 61.477,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form",
+        "numbers not in the facts: 36"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 2.11%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The corroding area is located at the top of the photo, approximately 1/4 inch below the surface. The corroding area is visible through the open grid deck, indicating that the corrosion is ongoing and may be worsening. The photo suggests that this area is likely to experience frequent wetting and potentially being ponded, particularly if the water contains salt or brackish components. Given the"
+    },
+    {
+      "image": "17",
+      "seconds": 74.468,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 35.29% of the photo shows corrosion (15.57% fair, 9.4% poor, 10.32% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "18",
+      "seconds": 38.718,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 13.2%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The corrosion is severe and extensive, covering approximately 13.2% of the steel structure. To address this issue, we recommend cleaning and painting the corroded area as preservation work. This action aligns with the priority code P3 and the due days of 365."
+    },
+    {
+      "image": "19",
+      "seconds": 60.426,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form",
+        "numbers not in the facts: 36"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 1.12%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The corroding area is located at the top of the photo, approximately 1/4 inch below the surface. The corroding area is visible through the open grid deck, indicating that the corrosion is ongoing and may be worsening. The photo suggests that this area is likely to experience frequent wetting and potentially being ponded, particularly if the water contains salt or brackish components. Given the"
+    },
+    {
+      "image": "20",
+      "seconds": 34.098,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 1.96%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The corrosion protection provided by the weathering grade steels is effective but may need additional measures to prevent further damage. The recommended action is to clean and spot paint the corroded area as preservation work, which aligns with the priority code P3 and the due days of 365."
+    },
+    {
+      "image": "21",
+      "seconds": 65.452,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 1,
+      "priority": "P4",
+      "problems": [
+        "does not give the priority code P4",
+        "numbers not in the facts: 12, 74",
+        "numbers not in the facts: 12, 74",
+        "no citation in [DOC:PAGE] form",
+        "numbers not in the facts: 12"
+      ],
+      "note": "Worst condition state is CS1: 0.12% of the photo shows corrosion (0.0% fair, 0.12% poor, 0.0% severe). Site exposure is moderate with 2912 wet hours a year. Action P4 within 730 days: no corrosion repair, keep cyclical washing and recheck at the next routine inspection. Guidance: [FHWA-HIF-16-002:74]."
+    },
+    {
+      "image": "22",
+      "seconds": 21.778,
+      "attempts": 1,
+      "first_try_ok": true,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 2.3%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Due Days:** 120\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains adequate. The recommended action includes measuring the remaining thickness, cleaning the steel to bare steel, and applying zone paint to the affected area. The priority code for this task is P2, and the due time is 120 days."
+    },
+    {
+      "image": "23",
+      "seconds": 71.84,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 45.49% of the photo shows corrosion (26.94% fair, 13.51% poor, 5.04% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "24",
+      "seconds": 61.088,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 37.77%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. The photo shows this area receiving the most time of wetness compared to the rest of the steel structure. The corrosion-resistant steel used in the bridge is crucial for maintaining the integrity of the steel structure, especially in regions with high humidity and salt concentrations.\n\n**Action:** Measure remaining thickness, clean to bare steel and"
+    },
+    {
+      "image": "25",
+      "seconds": 48.711,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 22.82%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3."
+    },
+    {
+      "image": "26",
+      "seconds": 79.914,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 10.91%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. The photo shows this area receiving the most time of wetness compared to the rest of the steel structure. The corrosion-resistant steel used in the bridge is crucial for maintaining the integrity of the steel structure, especially in regions with high humidity and salt concentrations. The bridge has been exposed to varying environmental conditions throughout its lifespan"
+    },
+    {
+      "image": "27",
+      "seconds": 40.743,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": false,
+      "worst_state": 2,
+      "priority": "P3",
+      "problems": [
+        "no citation in [DOC:PAGE] form"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS2 (Fair)\n\n**Corroded Share:** 3.51%\n\n**Action:** Clean and spot paint the corroded area as preservation work.\n\n**Priority Code:** P3\n\n**Due Days:** 365\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe photo shows that the area under an open grid deck is experiencing active corrosion. The corrosion is severe, affecting the entire steel structure, including the weathering grade steels. The corrosion is causing extensive damage to the bridge, requiring immediate attention to prevent further deterioration. The action recommended is to clean and spot paint the corroded area as preservation work, which aligns with the priority code P3 and the due days of 365."
+    },
+    {
+      "image": "28",
+      "seconds": 69.525,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 69.07% of the photo shows corrosion (47.83% fair, 11.43% poor, 9.81% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "29",
+      "seconds": 75.401,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 43.05%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3."
+    },
+    {
+      "image": "30",
+      "seconds": 52.797,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 10.8%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this action"
+    },
+    {
+      "image": "31",
+      "seconds": 48.107,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 10.92%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "32",
+      "seconds": 43.75,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1"
+      ],
+      "note": "**Bridge Inspection Record**\n\n**Worst Condition State:** CS4 (Severe)\n\n**Corroded Share:** 22.22%\n\n**Action:** Structural evaluation of section loss by a qualified engineer before any coating work\n\n**Due Days:** 30\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:15]\n\n**Note:**\n\nThe structural evaluation process has been initiated to assess the extent of section loss in the steel members of the bridge. This assessment will help determine the appropriate course of action to address the identified issues and ensure the longevity and safety of the steel structure.\n\n**Priority Code P1:** The action of structuring the evaluation process aligns with the highest priority requirement outlined in the guidelines provided. The due date of 30 days ensures that this process is completed promptly to minimize potential risks and maintain the integrity of"
+    },
+    {
+      "image": "33",
+      "seconds": 69.094,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 12.37%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3."
+    },
+    {
+      "image": "34",
+      "seconds": 44.203,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 18.46%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "35",
+      "seconds": 47.473,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 12.37%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:** [FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that this"
+    },
+    {
+      "image": "36",
+      "seconds": 69.162,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 16.64%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3."
+    },
+    {
+      "image": "37",
+      "seconds": 59.676,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 59.91%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. The photo shows this area, where active corrosion is evident. To address this issue, the bridge should be inspected and repaired to ensure the longevity of the steel structure. The recommended action includes measuring the remaining thickness, cleaning the steel to bare steel, and applying zone paint to the affected area. This measure aims to"
+    },
+    {
+      "image": "38",
+      "seconds": 53.058,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 8.34%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area beneath the open grid deck. To address this issue, the following actions should be taken:\n\n1. **Measure Remaining Thickness:** Conduct a thorough visual inspection of the entire bridge to determine the extent of corrosion.\n2. **Clean to Bare Steel:** Apply a protective layer of zinc oxide to the exposed steel surfaces to prevent further corrosion.\n3. **"
+    },
+    {
+      "image": "39",
+      "seconds": 62.643,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 15.39% of the photo shows corrosion (5.13% fair, 6.61% poor, 3.65% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    },
+    {
+      "image": "40",
+      "seconds": 70.306,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2",
+        "numbers not in the facts: 74"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 10.09%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code:** P2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:**\n\nThe bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. The photo shows this area receiving the most time of wetness compared to the rest of the steel structure. The remaining corrosion protection option, corrosion-resistant steel, involves fabricating the bridge from steels with an inherent high tolerance against corrosion. Weathering steels are specially formulated alloys that form oxides at the interface"
+    },
+    {
+      "image": "41",
+      "seconds": 44.738,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 3,
+      "priority": "P2",
+      "problems": [
+        "does not give the priority code P2"
+      ],
+      "note": "**Bridge Inspection Note**\n\n**Worst Condition State:** CS3 (poor)\n\n**Corroded Share:** 35.84%\n\n**Action:** Measure remaining thickness, clean to bare steel and zone paint the affected area.\n\n**Priority Code P2:** 2\n\n**Due Time:** 120 days\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:74]\n\n**Note:** The bridge's steel structure has experienced severe corrosion, with the highest percentage of corrosion being found in the area under an open grid deck. To address this issue, the bridge should be inspected and repaired to ensure the remaining thickness remains sufficient for decades without further deterioration. The recommended action includes measuring the remaining thickness, cleaning the affected area to remove any residual corrosion, and applying a protective coat to prevent future corrosion. The priority code P2 indicates that"
+    },
+    {
+      "image": "42",
+      "seconds": 40.963,
+      "attempts": 2,
+      "first_try_ok": false,
+      "final_ok": true,
+      "fallback": false,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1"
+      ],
+      "note": "**Bridge Inspection Record**\n\n**Worst Condition State:** CS4 (Severe)\n\n**Corroded Share:** 49.63%\n\n**Action:** Structural evaluation of section loss by a qualified engineer before any coating work\n\n**Due Days:** 30\n\n**Excerpt Citation:**\n[FHWA-HIF-16-002:15]\n\n**Note:**\n\nThe structural evaluation process has been initiated to assess the extent of section loss in the steel members of the bridge. This assessment will help determine the appropriate course of action to address the identified issues and ensure the longevity and safety of the steel structure.\n\n**Priority Code P1:** The action of structuring the evaluation process aligns with the highest priority requirement outlined in the guidelines provided. The due date of 30 days ensures that this process is completed within the specified timeframe, allowing for timely corrective measures"
+    },
+    {
+      "image": "43",
+      "seconds": 78.759,
+      "attempts": 3,
+      "first_try_ok": false,
+      "final_ok": false,
+      "fallback": true,
+      "paused_for_review": true,
+      "worst_state": 4,
+      "priority": "P1",
+      "problems": [
+        "does not give the priority code P1",
+        "does not give the priority code P1",
+        "does not give the priority code P1"
+      ],
+      "note": "Worst condition state is CS4 (severe): 37.22% of the photo shows corrosion (17.47% fair, 5.87% poor, 13.88% severe). Site exposure is moderate with 2912 wet hours a year. Action P1 within 30 days: structural evaluation of section loss by a qualified engineer before any coating work. Guidance: [FHWA-HIF-16-002:15]."
+    }
+  ]
+}
